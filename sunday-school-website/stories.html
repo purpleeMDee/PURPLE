@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Sunday School Stories</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Sunday School Stories</a>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger-menu" aria-label="Open navigation menu">&#9776;</button>
+    </header>
+
+    <main class="stories-page">
+        <section class="page-header">
+            <h1>Our Stories</h1>
+            <p>Explore our collection of stories about Jesus.</p>
+        </section>
+
+        <section class="search-and-filter">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for a story...">
+            </div>
+            <div class="filter-categories">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="parables">Parables</button>
+                <button class="filter-btn" data-category="miracles">Miracles</button>
+                <button class="filter-btn" data-category="life-of-jesus">Life of Jesus</button>
+            </div>
+        </section>
+
+        <section class="story-grid" id="story-grid">
+            <!-- Story cards will be dynamically inserted here by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sunday School Stories. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/stories.js"></script>
+</body>
+</html>

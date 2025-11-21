@@ -1,0 +1,354 @@
+/* Basic Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5e6; /* A warm, friendly color */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc80; /* A playful, warm color */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo a {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #e5a75b;
+}
+
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Homepage Main Content */
+.homepage .hero {
+    background-image: url('../images/hero-bg.jpg'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero-text h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ffcc80;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #ff7f50; /* A friendly coral color */
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff6347;
+}
+
+.featured-stories {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.featured-stories h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    color: #ff7f50;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #ffcc80;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide nav menu on mobile */
+        position: absolute;
+        top: 80px; /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        background-color: #ffcc80;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Stories Page */
+.stories-page .page-header {
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stories-page .page-header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.stories-page .page-header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.search-and-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fdf5e6;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 0.8rem;
+    border: 2px solid #ffcc80;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.filter-categories .filter-btn {
+    background-color: #fff;
+    border: 2px solid #ffcc80;
+    color: #ffcc80;
+    padding: 0.8rem 1.5rem;
+    margin-left: 0.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-categories .filter-btn:hover,
+.filter-categories .filter-btn.active {
+    background-color: #ffcc80;
+    color: #fff;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.story-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.story-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.story-card-content {
+    padding: 1.5rem;
+}
+
+.story-card-content h3 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.8rem;
+    color: #ff7f50;
+    margin: 0 0 0.5rem 0;
+}
+
+.story-card-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive adjustments for stories page */
+@media (max-width: 768px) {
+    .search-and-filter {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: calc(100% - 1.6rem);
+    }
+
+    .filter-categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-categories .filter-btn {
+        margin: 0.5rem;
+    }
+}
+
+/* Story Detail Page */
+.story-detail-page {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.story-content h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    color: #ff7f50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.story-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.story-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.story-text p {
+    margin-bottom: 1.5rem;
+}
+
+.story-audio {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.story-audio h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #ff7f50;
+    margin-bottom: 1rem;
+}
+
+.story-audio audio {
+    width: 100%;
+}
+
+.story-gallery {
+    margin-top: 2rem;
+}
+
+.story-gallery h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #ff7f50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-images img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
